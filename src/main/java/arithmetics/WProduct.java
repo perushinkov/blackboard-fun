@@ -1,12 +1,15 @@
 package arithmetics;
 
-import core.*;
+import core.BlackBoardAgent;
+import core.Job;
+import core.JobType;
+import core.Worker;
 
 /**
  * Created by Emanuil on 11/03/2017.
  */
-class WSum extends Worker {
-  public WSum(BlackBoardAgent agent) {
+public class WProduct extends Worker {
+  public WProduct (BlackBoardAgent agent) {
     super(agent);
   }
 
@@ -15,15 +18,15 @@ class WSum extends Worker {
 
   @Override
   public Double executeJob(Job job) {
-    return ((JSum)job)
+    return ((JProduct)job)
       .getParams()
       .stream()
-      .reduce((Double a, Double b) -> a + b)
+      .reduce((Double a, Double b) -> a * b)
       .orElse(null);
   }
 
   @Override
   public JobType getJobType() {
-    return Types.TSum.getJobType();
+    return Types.TProduct.getJobType();
   }
 }

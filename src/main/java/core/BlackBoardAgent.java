@@ -10,7 +10,7 @@ public class BlackBoardAgent {
     this.blackBoard = blackBoard;
   }
 
-  public Result run(Job job) {
+  public Object run(Job job) {
     return blackBoard.run(job);
   }
 }

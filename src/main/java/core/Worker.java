@@ -4,7 +4,7 @@ package core;
  * Created by Emanuil on 11/03/2017.
  */
 public abstract class Worker {
-  BlackBoardAgent agent;
+  protected BlackBoardAgent agent;
   public Worker(BlackBoardAgent agent) {
     this.agent = agent;
     init();
