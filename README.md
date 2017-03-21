@@ -5,4 +5,4 @@ Workers get registered in the blackboard. Each worker declares it can do a certa
 
 When a job gets posted to the blackboard, it is responsible for finding a worker that can do the job and give it to them. If none is found the blackboard halts.
 
-Blackboard makes sure jobs run in parallel and improve performance and logging.
+Blackboard makes sure jobs run in parallel and improves performance and logging.
